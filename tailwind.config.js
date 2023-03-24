@@ -15,7 +15,7 @@ module.exports = {
         herobackground: "url('https://source.unsplash.com/-uHVRvDr7pg')",
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
       },
     },
   },

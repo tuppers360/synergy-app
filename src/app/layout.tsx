@@ -9,6 +9,14 @@ export const metadata = {
   description: 'Set for Life',
 };
 
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -16,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${inter.variable} font-sans`}>
         <NavBar bottomNavigation={bottomNavigation} />
         {children}
         <Footer />
