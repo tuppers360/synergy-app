@@ -49,16 +49,16 @@ const people = [
 function AboutUs() {
   return (
     <main>
-      <div className="relative flex h-72 flex-col items-center justify-center bg-slate-500/50 bg-herobackground bg-cover bg-center bg-blend-color-burn ">
+      <div className="bg-herobackground relative flex h-72 flex-col items-center justify-center bg-slate-500/50 bg-cover bg-center bg-blend-color-burn ">
         <h1 className="flex max-w-3xl items-center justify-center p-8 text-center text-6xl font-black text-slate-100 md:text-8xl">
           About Us
         </h1>
       </div>
       <section>
         <div className="bg-white py-16 md:py-24 lg:py-32">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-3xl font-bold tracking-tight text-indigo-700 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-indigo-800 sm:text-4xl">
                 Our team
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-700">
@@ -78,7 +78,7 @@ function AboutUs() {
                     src={person.imageUrl}
                     alt=""
                   />
-                  <h3 className="mt-6 text-lg font-semibold leading-8 text-indigo-700">
+                  <h3 className="mt-6 text-lg font-semibold leading-8 text-indigo-800">
                     {person.name}
                   </h3>
                   <p className="text-base font-bold leading-7 text-slate-600">
