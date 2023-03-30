@@ -1,6 +1,5 @@
 import './globals.css';
 
-import Footer from '@/components/Footer';
 import NavBar from '@/components/NavBar';
 import { bottomNavigation } from '@/lib/navigation-data';
 
@@ -9,6 +8,7 @@ export const metadata = {
   description: 'Set for Life',
 };
 
+import Footer from '@/components/Footer';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({
