@@ -3,7 +3,7 @@ import { Button } from './ui/Button';
 
 function MainPageHero() {
   return (
-    <div className="relative isolate bg-gradient-to-b from-indigo-100/50 to-amber-100/75">
+    <div className="relative isolate bg-gradient-to-b from-indigo-100/50 to-amber-100/50">
       <div className="overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 pb-32 pt-24 sm:pt-32 lg:px-8 lg:pt-16">
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
