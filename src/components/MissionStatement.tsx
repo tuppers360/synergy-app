@@ -4,7 +4,7 @@ const MissionStatement = () => {
       {/* Mission Quote section */}
       <section
         aria-labelledby="mission quote statement"
-        className="bg-amber-100/75 xl:mx-auto"
+        className="bg-amber-100/50 xl:mx-auto"
       >
         <div className="relative isolate overflow-hidden ">
           <div className="px-6 py-12 sm:px-6 sm:py-24 lg:px-8">
