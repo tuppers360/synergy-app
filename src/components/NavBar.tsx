@@ -23,7 +23,7 @@ type NavBarProps = { name: string; href: string }[];
 
 function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
   return (
-    <Popover as="header" className="bg-slate-100/50">
+    <Popover as="header" className="bg-indigo-100/50">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8  lg:pb-8">
@@ -74,8 +74,8 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                 </div>
               </div>
 
-              <div className="hidden gap-x-5 lg:relative lg:z-10 lg:ml-8 lg:flex lg:items-center">
-                <div className="items-center font-medium text-slate-600 sm:inline-flex">
+              <div className="hidden gap-x-5 text-indigo-800 lg:relative lg:z-10 lg:ml-8 lg:flex lg:items-center">
+                <div className="items-center font-medium sm:inline-flex">
                   <span className="rounded-lg bg-amber-200 p-3">
                     <MapPinIcon className="h-6 w-6" aria-hidden="true" />
                   </span>
@@ -86,7 +86,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                     </p>
                   </div>
                 </div>
-                <div className="items-center font-medium text-slate-600 sm:inline-flex">
+                <div className="items-center font-medium  sm:inline-flex">
                   <span className="rounded-lg bg-red-200 p-3">
                     <EnvelopeIcon className="h-6 w-6" aria-hidden="true" />
                   </span>
@@ -97,7 +97,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                     </p>
                   </div>
                 </div>
-                <div className="items-center font-medium text-slate-600 sm:inline-flex">
+                <div className="items-center font-medium  sm:inline-flex">
                   <span className="rounded-lg bg-indigo-200 p-3">
                     <PhoneIcon className="h-6 w-6" aria-hidden="true" />
                   </span>
@@ -116,7 +116,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative z-10 block w-fit text-base font-medium text-slate-600 after:absolute after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-indigo-500 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+                  className="relative z-10 block w-fit text-base font-medium text-indigo-800 after:absolute after:block after:h-[3px] after:w-full after:origin-left after:scale-x-0 after:bg-amber-500 after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
                 >
                   {item.name}
                 </Link>
