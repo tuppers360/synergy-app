@@ -1,6 +1,6 @@
 import {
-  BuildingOffice2Icon,
   EnvelopeIcon,
+  MapPinIcon,
   PhoneIcon,
 } from '@heroicons/react/24/outline';
 
@@ -58,23 +58,42 @@ function ContactUs() {
                 Get in touch
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Proin volutpat consequat porttitor cras nullam gravida at. Orci
-                molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-                Arcu sed malesuada et magna.
+                Welcome to our school academy trust&apos;s contact page. We
+                value your feedback and are here to answer any questions you may
+                have about our schools, programs, and services. Contact us by
+                phone, email, or through the form on this page. Thank you for
+                your interest in our commitment to excellence in education.
               </p>
               <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
                 <div className="flex gap-x-4">
                   <dt className="flex-none">
                     <span className="sr-only">Telephone</span>
-                    <BuildingOffice2Icon
+                    <MapPinIcon
                       className="h-7 w-6 text-gray-400"
                       aria-hidden="true"
                     />
                   </dt>
                   <dd>
-                    545 Mavis Island
+                    Blackpool Old Road,
                     <br />
-                    Chicago, IL 99191
+                    Blackpool, FY3 7LR
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">Email</span>
+                    <EnvelopeIcon
+                      className="h-7 w-6 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </dt>
+                  <dd>
+                    <a
+                      className="hover:text-gray-900"
+                      href="mailto:hello@example.com"
+                    >
+                      admin@set-trust.sch.uk
+                    </a>
                   </dd>
                 </div>
                 <div className="flex gap-x-4">
@@ -86,28 +105,8 @@ function ContactUs() {
                     />
                   </dt>
                   <dd>
-                    <a
-                      className="hover:text-gray-900"
-                      href="tel:+1 (555) 234-5678"
-                    >
-                      +1 (555) 234-5678
-                    </a>
-                  </dd>
-                </div>
-                <div className="flex gap-x-4">
-                  <dt className="flex-none">
-                    <span className="sr-only">Telephone</span>
-                    <EnvelopeIcon
-                      className="h-7 w-6 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </dt>
-                  <dd>
-                    <a
-                      className="hover:text-gray-900"
-                      href="mailto:hello@example.com"
-                    >
-                      hello@example.com
+                    <a className="hover:text-gray-900" href="tel:01253 392188">
+                      01253 392188
                     </a>
                   </dd>
                 </div>
