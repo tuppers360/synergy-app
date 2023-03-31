@@ -15,6 +15,12 @@ export default {
       title: 'Breed',
     },
     {
+      name: 'image',
+      type: 'image',
+      title: 'Image',
+      options: { hotspot: true },
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'slug',
