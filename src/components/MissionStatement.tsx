@@ -3,13 +3,16 @@ const MissionStatement = () => {
     <>
       {/* Mission Quote section */}
       <section
-        aria-labelledby="mission quote statement"
+        aria-labelledby="mission-quote-statement"
         className="bg-amber-100/50 xl:mx-auto"
       >
         <div className="relative isolate overflow-hidden ">
           <div className="px-6 py-12 sm:px-6 sm:py-24 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-4xl font-extrabold tracking-tight text-indigo-800 sm:text-6xl">
+              <h2
+                id="mission-quote-statement"
+                className="text-4xl font-extrabold tracking-tight text-indigo-800 sm:text-6xl"
+              >
                 Our Mission
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-8 text-indigo-600">

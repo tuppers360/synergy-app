@@ -35,9 +35,9 @@ export default function PageCTA() {
           <div className="flex items-center justify-center lg:ml-auto lg:pl-4 lg:pt-4">
             <div className="lg:max-w-lg">
               <h2 className="flex text-base font-semibold leading-7 text-indigo-600">
-                <div className="relative -rotate-3 transform rounded-xl bg-indigo-200 px-5 py-1 text-indigo-800 shadow-md">
+                <span className="relative -rotate-3 transform rounded-xl bg-indigo-200 px-5 py-1 text-indigo-800 shadow-md">
                   Contact us
-                </div>
+                </span>
               </h2>
               <p className="mt-4 text-4xl font-bold tracking-tight text-indigo-800 sm:text-6xl ">
                 Want to know more?

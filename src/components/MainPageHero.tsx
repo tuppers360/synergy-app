@@ -9,9 +9,9 @@ function MainPageHero() {
           <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
             <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
               <h2 className="flex text-base font-semibold leading-7 text-indigo-600">
-                <div className="relative -rotate-3 transform rounded-xl bg-indigo-200 px-5 py-1 text-indigo-800 shadow-md">
+                <span className="relative -rotate-3 transform rounded-xl bg-indigo-200 px-5 py-1 text-indigo-800 shadow-md">
                   Welcome to
-                </div>
+                </span>
               </h2>
               <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-indigo-700 sm:text-5xl lg:text-6xl">
                 <span className="text-yellow-500">SYNERGY</span> Education Trust
