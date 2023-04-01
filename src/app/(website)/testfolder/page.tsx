@@ -1,10 +1,44 @@
 import { PortableText } from '@portabletext/react';
+import { getImageDimensions } from '@sanity/asset-utils';
+import urlBuilder from '@sanity/image-url';
 import { createClient, groq } from 'next-sanity';
 
 const clientConfig = {
   projectId: 'v8dfdyvl',
   dataset: 'production',
   useCdn: false,
+};
+
+// Barebones lazy-loaded image component
+const SampleImageComponent = ({ value, isInline }) => {
+  const { width, height } = getImageDimensions(value);
+  return (
+    <img
+      src={urlBuilder()
+        .image(value)
+        .width(isInline ? 100 : 800)
+        .fit('max')
+        .auto('format')
+        .url()}
+      alt={value.alt || ' '}
+      loading="lazy"
+      style={{
+        // Display alongside text if image appears inside a block text span
+        display: isInline ? 'inline-block' : 'block',
+
+        // Avoid jumping around with aspect-ratio CSS property
+        aspectRatio: width / height,
+      }}
+    />
+  );
+};
+
+const components = {
+  types: {
+    image: SampleImageComponent,
+    // Any other custom types you have in your content
+    // Examples: mapLocation, contactForm, code, featuredProjects, latestNews, etc.
+  },
 };
 
 const client = createClient(clientConfig);
@@ -17,10 +51,7 @@ function getCorgis() {
       'slug': slug.current,
       'image': image.asset->url,
       'alt': image.alt,
-      content[] {
-        _type == "image" => {
-            asset->
-        }}
+      content[] 
     }
     `);
 }
@@ -46,7 +77,7 @@ async function corgi() {
             <div key={corgi._id}>
               <h1>{corgi.name}</h1>
               <div className="prose lg:prose-xl">
-                <PortableText value={corgi.content} />
+                <PortableText value={corgi.content} components={components} />
               </div>
             </div>
           );
