@@ -11,7 +11,7 @@ const clientConfig = {
 };
 
 // Barebones lazy-loaded image component
-const SampleImageComponent = ({ value, isInline }) => {
+const SampleImageComponent = ({ value, isInline }: any) => {
   const { width, height } = getImageDimensions(value);
   return (
     <img
@@ -50,7 +50,7 @@ function getCorgis() {
     name,
     'slug': slug.current,
     'image': image.asset->url,
-    'alt': image.alt,
+      'alt': image.alt,
     content 
   }
   `);
@@ -62,7 +62,7 @@ type Corgi = {
   slug: string;
   image: string;
   alt: string;
-  content: any;
+  content: [];
 };
 
 async function corgi() {
