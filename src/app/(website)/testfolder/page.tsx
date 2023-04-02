@@ -7,6 +7,7 @@ const clientConfig = {
   projectId: 'v8dfdyvl',
   dataset: 'production',
   useCdn: false,
+  apiVersion: '2021-08-31',
 };
 
 // Barebones lazy-loaded image component
@@ -14,7 +15,7 @@ const SampleImageComponent = ({ value, isInline }) => {
   const { width, height } = getImageDimensions(value);
   return (
     <img
-      src={urlBuilder()
+      src={urlBuilder(clientConfig)
         .image(value)
         .width(isInline ? 100 : 800)
         .fit('max')
@@ -44,16 +45,15 @@ const components = {
 const client = createClient(clientConfig);
 
 function getCorgis() {
-  return client.fetch(groq`
-    *[ _type == "corgi" ]{
-      _id,
-      name,
-      'slug': slug.current,
-      'image': image.asset->url,
-      'alt': image.alt,
-      content[] 
-    }
-    `);
+  return client.fetch(groq`*[ _type == "corgi" ]{
+    _id,
+    name,
+    'slug': slug.current,
+    'image': image.asset->url,
+    'alt': image.alt,
+    content 
+  }
+  `);
 }
 
 type Corgi = {
@@ -71,6 +71,8 @@ async function corgi() {
 
   return (
     <div className="mx-auto max-w-7xl px-6 pb-32 pt-24 sm:pt-32 lg:px-8 lg:pt-16">
+      <pre>{JSON.stringify(corgis, null, 2)}</pre>
+
       <div>
         {corgis.map((corgi: Corgi) => {
           return (
