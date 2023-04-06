@@ -1,5 +1,5 @@
 // schemas/corgi.js
-export default {
+const corgi = {
   name: 'corgi',
   type: 'document',
   title: 'Corgis',
@@ -53,3 +53,5 @@ export default {
     },
   ],
 };
+
+export default corgi;

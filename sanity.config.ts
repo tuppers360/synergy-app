@@ -1,4 +1,4 @@
-import { schemaTypes } from '@/app/(sanity)/admin/schema';
+import { schemaTypes } from '@/lib/sanity/schema';
 import { visionTool } from '@sanity/vision';
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
 import { deskTool } from 'sanity/desk';
