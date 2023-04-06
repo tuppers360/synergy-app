@@ -1,7 +1,7 @@
 import './globals.css';
 
 import NavBar from '@/components/NavBar';
-import { bottomNavigation } from '@/lib/navigation-data';
+import { bottomNavigation } from '@/lib/data/navigation-data';
 
 export const metadata = {
   title: 'Synergy Education Trust',

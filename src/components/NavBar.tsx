@@ -151,7 +151,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                   className="absolute inset-x-0 top-0 z-30 mx-auto w-full max-w-3xl origin-top transform p-2 transition"
                 >
                   <div className="divide-y divide-gray-200 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="bg-indigo-100/50 pt-3 pb-2">
+                    <div className="bg-indigo-100/50 pb-2 pt-3">
                       <div className="flex items-center justify-between px-4">
                         <div>
                           <Link className="inline-flex items-center" href="/">
@@ -198,7 +198,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                         ))}
                       </div>
                     </div>
-                    <div className="bg-indigo-100/50 pt-4 pb-2">
+                    <div className="bg-indigo-100/50 pb-2 pt-4">
                       <div className="flex items-center px-5">
                         <button
                           type="button"
