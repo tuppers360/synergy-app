@@ -1,16 +1,8 @@
 {
   "extends": "next/core-web-vitals",
-  "import/no-anonymous-default-export": [
-    "error",
-    {
-      "allowArray": false,
-      "allowArrowFunction": false,
-      "allowAnonymousClass": false,
-      "allowAnonymousFunction": false,
-      "allowCallExpression": true, // The true value here is for backward compatibility
-      "allowNew": false,
-      "allowLiteral": false,
-      "allowObject": true
-    }
-  ]
+  "plugins": ["@asbjorn/groq"],
+  "rules": {
+    "@asbjorn/groq/no-syntax-errors": "error",
+    "@asbjorn/groq/no-template-expressions": "error"
+  }
 }
