@@ -1,4 +1,4 @@
-import { footerNavigation } from '@/lib/footer-navigation';
+import { footerNavigation } from '@/lib/data/footer-navigation';
 import { cn } from '@/lib/utils';
 import { ShieldCheckIcon } from '@heroicons/react/20/solid';
 import {
