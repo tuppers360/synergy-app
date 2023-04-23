@@ -1,75 +1,41 @@
 import {
   EnvelopeIcon,
   MapPinIcon,
-  PhoneIcon,
+  PhoneIcon
 } from '@heroicons/react/24/outline';
 
 function ContactUs() {
   return (
     <main>
-      <div className="relative flex h-72 flex-col items-center justify-center bg-slate-500/50 bg-herobackground bg-cover bg-center bg-blend-color-burn ">
-        <h1 className="flex max-w-3xl items-center justify-center p-8 text-center text-6xl font-black text-slate-100 md:text-8xl">
-          Contact Us
-        </h1>
-      </div>
-      <div className="relative isolate bg-white">
+      <div className="relative isolate">
+        <div className="mt-12 flex flex-col">
+          <h2 className="flex justify-center text-base font-semibold leading-7">
+            <div className="relative -rotate-3 transform rounded-xl bg-indigo-200 px-5 py-1 text-indigo-800 shadow-md">
+              Get in Touch
+            </div>
+          </h2>
+          <h1 className="flex items-center justify-center p-4 text-center text-6xl font-black text-indigo-800 md:text-8xl">
+            Contact Us
+          </h1>
+        </div>
         <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-          <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:py-48 lg:px-8">
+          <div className="relative px-4 pb-12 pt-24 sm:pt-16 lg:static lg:px-4 lg:py-24">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-              <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
-                <svg
-                  className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-                  aria-hidden="true"
-                >
-                  <defs>
-                    <pattern
-                      id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-                      width={200}
-                      height={200}
-                      x="100%"
-                      y={-1}
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <path d="M130 200V.5M.5 .5H200" fill="none" />
-                    </pattern>
-                  </defs>
-                  <rect
-                    width="100%"
-                    height="100%"
-                    strokeWidth={0}
-                    fill="white"
-                  />
-                  <svg
-                    x="100%"
-                    y={-1}
-                    className="overflow-visible fill-gray-50"
-                  >
-                    <path d="M-470.5 0h201v201h-201Z" strokeWidth={0} />
-                  </svg>
-                  <rect
-                    width="100%"
-                    height="100%"
-                    strokeWidth={0}
-                    fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-                  />
-                </svg>
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                Get in touch
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Welcome to our school academy trust&apos;s contact page. We
-                value your feedback and are here to answer any questions you may
-                have about our schools, programs, and services. Contact us by
-                phone, email, or through the form on this page. Thank you for
+              <h1 className="mt-4 text-3xl font-bold tracking-tight text-indigo-800 sm:text-4xl">
+                Welcome to our school academy trust&apos;s contact page.
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-indigo-600">
+                We value your feedback and are here to answer any questions you
+                may have about our schools, programs, and services. Contact us
+                by phone, email, or through the form on this page. Thank you for
                 your interest in our commitment to excellence in education.
               </p>
-              <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
+              <dl className="mt-10 space-y-4 text-base leading-7 text-indigo-600">
                 <div className="flex gap-x-4">
                   <dt className="flex-none">
                     <span className="sr-only">Telephone</span>
                     <MapPinIcon
-                      className="h-7 w-6 text-gray-400"
+                      className="h-7 w-6 text-indigo-400"
                       aria-hidden="true"
                     />
                   </dt>
@@ -83,13 +49,13 @@ function ContactUs() {
                   <dt className="flex-none">
                     <span className="sr-only">Email</span>
                     <EnvelopeIcon
-                      className="h-7 w-6 text-gray-400"
+                      className="h-7 w-6 text-indigo-400"
                       aria-hidden="true"
                     />
                   </dt>
                   <dd>
                     <a
-                      className="hover:text-gray-900"
+                      className="hover:text-indigo-900"
                       href="mailto:hello@example.com"
                     >
                       admin@set-trust.sch.uk
@@ -100,12 +66,12 @@ function ContactUs() {
                   <dt className="flex-none">
                     <span className="sr-only">Telephone</span>
                     <PhoneIcon
-                      className="h-7 w-6 text-gray-400"
+                      className="h-7 w-6 text-indigo-400"
                       aria-hidden="true"
                     />
                   </dt>
                   <dd>
-                    <a className="hover:text-gray-900" href="tel:01253 392188">
+                    <a className="hover:text-indigo-900" href="tel:01253 392188">
                       01253 392188
                     </a>
                   </dd>
@@ -116,14 +82,14 @@ function ContactUs() {
           <form
             action="#"
             method="POST"
-            className="px-6 pb-24 pt-20 sm:pb-32 lg:py-48 lg:px-8"
+            className="px-4 pb-24 pt-12 sm:pb-32 lg:px-4 lg:py-24"
           >
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-              <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                   <label
                     htmlFor="first-name"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-indigo-900"
                   >
                     First name
                   </label>
@@ -133,14 +99,14 @@ function ContactUs() {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 px-3.5 py-2 text-indigo-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div>
                   <label
                     htmlFor="last-name"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-indigo-900"
                   >
                     Last name
                   </label>
@@ -150,14 +116,14 @@ function ContactUs() {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 px-3.5 py-2 text-indigo-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-indigo-900"
                   >
                     Email
                   </label>
@@ -167,14 +133,14 @@ function ContactUs() {
                       name="email"
                       id="email"
                       autoComplete="email"
-                      className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 px-3.5 py-2 text-indigo-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="phone-number"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-indigo-900"
                   >
                     Phone number
                   </label>
@@ -184,14 +150,14 @@ function ContactUs() {
                       name="phone-number"
                       id="phone-number"
                       autoComplete="tel"
-                      className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 px-3.5 py-2 text-indigo-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold leading-6 text-gray-900"
+                    className="block text-sm font-semibold leading-6 text-indigo-900"
                   >
                     Message
                   </label>
@@ -200,7 +166,7 @@ function ContactUs() {
                       name="message"
                       id="message"
                       rows={4}
-                      className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 px-3.5 py-2 text-indigo-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       defaultValue={''}
                     />
                   </div>
