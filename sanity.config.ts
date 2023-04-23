@@ -1,3 +1,4 @@
+import deskStructure from '@/lib/sanity/desk/structure';
 import { schemaTypes } from '@/lib/sanity/schema';
 import { visionTool } from '@sanity/vision';
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
@@ -9,7 +10,13 @@ export const config = {
   title: 'Sanity Studio',
   apiVersion: '2021-08-31',
   basePath: '/admin',
-  plugins: [deskTool(), unsplashImageAsset(), visionTool()],
+  plugins: [
+    deskTool({
+      structure: deskStructure,
+    }),
+    unsplashImageAsset(),
+    visionTool(),
+  ],
   schema: {
     types: schemaTypes,
   },
