@@ -33,7 +33,7 @@ async function CorgiPage() {
           return (
             <div key={corgi._id}>
               <h1>{corgi.name}</h1>
-              <div className="prose lg:prose-xl">
+              <div className="prose lg:prose-xl prose-h2:text-indigo-800 ">
                 <PortableText value={corgi.content} components={components} />
               </div>
             </div>
