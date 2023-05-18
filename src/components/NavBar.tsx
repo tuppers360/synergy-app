@@ -32,7 +32,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                 <div className="flex flex-shrink-0 items-center">
                   <Link className="inline-flex items-center" href="/">
                     <ShieldCheckIcon
-                      className="h-14 w-auto text-amber-500"
+                      className="h-14 w-auto text-brand-500"
                       aria-hidden="true"
                     />
                     <div className="ml-4 flex flex-col text-indigo-700">
