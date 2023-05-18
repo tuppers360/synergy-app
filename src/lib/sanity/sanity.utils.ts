@@ -16,13 +16,19 @@ export async function getCorgis(): Promise<Corgi[]> {
   );
 }
 
-export async function getPolicies(): Promise<Policy[]> {
+export async function getPolicy(): Promise<Policy> {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "policy"]{
-        _id,
-        _createdAt,
-        name,
-        content
-      }`
+    groq`*[_type == "policy"][0]{
+      _id,
+      _createdAt,
+      title,
+      content,
+      "headings": content[length(style) == 2 && string::startsWith(style, "h")]{
+        _key,
+        'heading':children[]{
+          text
+        }
+      }
+    }`
   );
 }

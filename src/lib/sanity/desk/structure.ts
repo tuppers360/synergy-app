@@ -101,6 +101,42 @@ const deskStructure = (S: StructureBuilder) =>
             ])
         ),
       S.listItem()
+        .title('Table of Contents')
+        .schemaType('toc')
+        .icon(InformationCircleIcon) // Info icon
+        .child(
+          S.documentTypeList('tocSection')
+            .title('Sections')
+            .schemaType('tocSection')
+            .child((documentId) =>
+              S.document()
+                .documentId(documentId)
+                .schemaType('tocSection')
+                .views([
+                  S.view.form().icon(CogIcon), // Form view icon
+                  S.view
+                    .component((): any => 'CustomPreview')
+                    .title('Preview')
+                    .icon(CogIcon),
+                ])
+            )
+        ),
+      S.listItem()
+        .title('Policies')
+        .icon(CogIcon)
+        .child(
+          S.documentTypeList('policy')
+            .title('Policies')
+            .child((documentId) =>
+              S.document()
+                .documentId(documentId)
+                .schemaType('policy')
+                .views([
+                  S.view.form().icon(CogIcon), // Form view icon
+                ])
+            )
+        ),
+      S.listItem()
         .title('Settings')
         .icon(CogIcon) // Settings icon
         .child(

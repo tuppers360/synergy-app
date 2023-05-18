@@ -41,16 +41,18 @@ const siteSettings = {
       group: 'details',
     },
     {
-      title: 'Main Navigation',
+      title: 'Main navigation',
       name: 'mainNav',
-      description: 'Select pages for the top menu',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{ type: 'page' }],
-        },
-      ],
+      description: 'Select menu for main navigation',
+      type: 'reference',
+      to: { type: 'navigation' },
+    },
+    {
+      title: 'Social navigation',
+      name: 'socialNav',
+      description: 'Select menu for social navigation',
+      type: 'reference',
+      to: { type: 'navigation' },
     },
   ],
   preview: {
