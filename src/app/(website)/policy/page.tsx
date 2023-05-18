@@ -1,27 +1,41 @@
-import { getPolicies } from '@/lib/sanity/sanity.utils';
-import { PortableText } from '@portabletext/react';
+import { getPolicy } from '@/lib/sanity/sanity.utils';
+import { PortableText, PortableTextComponents } from '@portabletext/react';
+
+// `components` object you'll pass to PortableText
+const components: PortableTextComponents = {
+  block: {
+    h2: ({ value, children }) => (
+      <h2 id={value._key}>
+        <a className=""></a>
+        <a href={value._key}></a>
+        {children}
+      </h2>
+    ),
+  },
+};
 
 async function PolicyPage() {
-  const policies = await getPolicies();
-  console.log('🚀 ~ file: page.tsx:6 ~ PolicyPage ~ policies:', policies);
+  const policy = await getPolicy();
+
   return (
     <div className="mx-auto max-w-7xl px-6 pb-32 pt-24 sm:pt-32 lg:px-8 lg:pt-16">
       PolicyPage
-      <div className="flex flex-col text-slate-500 lg:flex-row-reverse">
-        <section className="sticky top-0 h-full w-full p-4 lg:w-1/3">
-          Fixed Sidebar
+      <div className="flex flex-col lg:flex-row-reverse">
+        <section className="sticky top-8 h-full w-full lg:w-1/3">
+          <span className="text-lg md:text-2xl">Policy Content</span>
+          <ul>
+            {policy.headings.map((item) => (
+              <li key={item._key}>
+                <a href={`#${item._key}`}>{item.heading[0].text}</a>
+              </li>
+            ))}
+          </ul>
         </section>
-        <section className="w-full space-y-4 p-4 lg:w-2/3">
-          {policies.map((policy) => {
-            return (
-              <div key={policy._id}>
-                <h1>{policy.name}</h1>
-                <div className="prose prose-lg prose-slate lg:prose-xl prose-h2:text-indigo-600 prose-p:text-indigo-600 prose-ul:text-indigo-600">
-                  <PortableText value={policy.content} />
-                </div>
-              </div>
-            );
-          })}
+        <section className="w-full space-y-4 pr-10 lg:w-2/3">
+          <h1>{policy.title}</h1>
+          <div className="prose md:prose-lg prose-h2:scroll-m-8">
+            <PortableText value={policy.content} components={components} />
+          </div>
         </section>
       </div>
     </div>
