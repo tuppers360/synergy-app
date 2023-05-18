@@ -8,6 +8,7 @@ export const metadata = {
   description: 'Set for Life',
 };
 
+import FootNew from '@/components/FootNew';
 import Footer from '@/components/Footer';
 import { Inter } from 'next/font/google';
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <NavBar bottomNavigation={bottomNavigation} />
         {children}
         <Footer />
+        <FootNew />
       </body>
     </html>
   );
