@@ -69,7 +69,7 @@ function AboutUs() {
                 Our current leadership team
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-700">
-                We&apos;re a dynamic school leadership team of passionate
+                We&#39;re a dynamic school leadership team of passionate
                 individuals who are dedicated to delivering the best results for
                 our students and the broader school community.
               </p>
