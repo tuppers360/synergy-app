@@ -1,13 +1,23 @@
-import MainPageHero from '@/components/MainPageHero';
-import MissionStatement from '@/components/MissionStatement';
-import PageCTA from '@/components/PageCTA';
+import NewMainPageHero from '@/components/NewMainPageHero';
+import NewMissionStatement from '@/components/NewMissionStatement';
+import NewPageCTA from '@/components/NewPageCTA';
 
-export default function Example() {
+export default function HomePage() {
   return (
-    <main>
-      <MainPageHero />
-      <MissionStatement />
-      <PageCTA />
-    </main>
+    <>
+      <main className="flex flex-1 flex-col">
+        <div className="flex-1">
+          <NewMainPageHero />
+          <NewMissionStatement />
+
+          <NewPageCTA />
+        </div>
+      </main>
+      {/* <main>
+        <MainPageHero />
+        <MissionStatement />
+        <PageCTA />
+      </main> */}
+    </>
   );
 }

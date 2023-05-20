@@ -6,7 +6,6 @@ export const bottomNavigation = [
   { name: 'Information', href: '#' },
   { name: 'Vacancies', href: '#' },
   { name: 'Contact Us', href: '/contactus' },
-  { name: 'Test Page', href: '/testfolder' },
 ];
 export const navigation = {
   categories: [

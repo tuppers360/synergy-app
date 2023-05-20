@@ -1,6 +1,5 @@
 import './globals.css';
 
-import NavBar from '@/components/NavBar';
 import { bottomNavigation } from '@/lib/data/navigation-data';
 
 export const metadata = {
@@ -8,9 +7,9 @@ export const metadata = {
   description: 'Set for Life',
 };
 
-import FootNew from '@/components/FootNew';
-import Footer from '@/components/Footer';
+import NewFooter from '@/components/NewFooter';
 import { Inter } from 'next/font/google';
+import NewNavBar from './../../components/NewNavBar';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,10 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans`}>
-        <NavBar bottomNavigation={bottomNavigation} />
+        <NewNavBar bottomNavigation={bottomNavigation} />
+        {/* <NavBar bottomNavigation={bottomNavigation} /> */}
         {children}
-        <Footer />
-        <FootNew />
+        {/* <Footer /> */}
+        <NewFooter />
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-function FootNew() {
+function NewFooter() {
   return (
     <div className="dark bg-gray-900">
       <footer className="bg-white px-6 pb-6 dark:bg-gray-900">
@@ -417,4 +417,4 @@ function FootNew() {
   );
 }
 
-export default FootNew;
+export default NewFooter;
