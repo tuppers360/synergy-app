@@ -1,12 +1,12 @@
-export const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP']
+export const currencies = ['CAD', 'USD', 'AUD', 'EUR', 'GBP'];
 export const bottomNavigation = [
   { name: 'Home', href: '#' },
-  { name: 'About Us', href: '#' },
+  { name: 'About Us', href: '/about' },
   { name: 'Our Schools', href: '#' },
   { name: 'Information', href: '#' },
   { name: 'Vacancies', href: '#' },
-  { name: 'Contact Us', href: '#' },
-]
+  { name: 'Contact Us', href: '/contactus' },
+];
 export const navigation = {
   categories: [
     {
@@ -87,7 +87,7 @@ export const navigation = {
     { name: 'Company', href: '#' },
     { name: 'Stores', href: '#' },
   ],
-}
+};
 export const categories = [
   {
     name: 'New Arrivals',
@@ -119,7 +119,7 @@ export const categories = [
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg',
   },
-]
+];
 export const collections = [
   {
     name: 'Handcrafted Collection',
@@ -151,32 +151,4 @@ export const collections = [
     description:
       'Be more productive than enterprise project managers with a single piece of paper.',
   },
-]
-export const footerNavigation = {
-  shop: [
-    { name: 'Bags', href: '#' },
-    { name: 'Tees', href: '#' },
-    { name: 'Objects', href: '#' },
-    { name: 'Home Goods', href: '#' },
-    { name: 'Accessories', href: '#' },
-  ],
-  company: [
-    { name: 'Who we are', href: '#' },
-    { name: 'Sustainability', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Terms & Conditions', href: '#' },
-    { name: 'Privacy', href: '#' },
-  ],
-  account: [
-    { name: 'Manage Account', href: '#' },
-    { name: 'Returns & Exchanges', href: '#' },
-    { name: 'Redeem a Gift Card', href: '#' },
-  ],
-  connect: [
-    { name: 'Contact Us', href: '#' },
-    { name: 'Twitter', href: '#' },
-    { name: 'Instagram', href: '#' },
-    { name: 'Pinterest', href: '#' },
-  ],
-}
+];

@@ -4,8 +4,13 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    dangerouslyAllowSVG: true,    
-    domains: ['images.unsplash.com', 'tailwindui.com'],
+    dangerouslyAllowSVG: true,
+    domains: [
+      'images.unsplash.com',
+      'source.unsplash.com',
+      'tailwindui.com',
+      'cdn.sanity.io',
+    ],
   },
 };
 
