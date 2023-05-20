@@ -1,3 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["@asbjorn/groq"],
+  "rules": {
+    "@asbjorn/groq/no-syntax-errors": "error",
+    "@asbjorn/groq/no-template-expressions": "error"
+  }
 }

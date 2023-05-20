@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const people = [
   {
     name: 'Leslie Alexander',
@@ -49,9 +51,14 @@ const people = [
 function AboutUs() {
   return (
     <main>
-      <div className="bg-herobackground relative flex h-72 flex-col items-center justify-center bg-slate-500/50 bg-cover bg-center bg-blend-color-burn ">
-        <h1 className="flex max-w-3xl items-center justify-center p-8 text-center text-6xl font-black text-slate-100 md:text-8xl">
-          About Us
+      <div className="mt-12 flex flex-col">
+        <h2 className="flex justify-center text-base font-semibold leading-7 text-indigo-600">
+          <div className="relative -rotate-3 transform rounded-xl bg-indigo-200 px-5 py-1 text-indigo-800 shadow-md">
+            About Us
+          </div>
+        </h2>
+        <h1 className="flex items-center justify-center p-4 text-center text-6xl font-black text-indigo-600 md:text-8xl">
+          We Are <span className="ml-4 text-yellow-500">SET</span>
         </h1>
       </div>
       <section>
@@ -59,10 +66,10 @@ function AboutUs() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight text-indigo-800 sm:text-4xl">
-                Our team
+                Our current leadership team
               </h2>
               <p className="mt-6 text-lg leading-8 text-slate-700">
-                We&apos;re a dynamic school leadership team of passionate
+                We&#39;re a dynamic school leadership team of passionate
                 individuals who are dedicated to delivering the best results for
                 our students and the broader school community.
               </p>
@@ -73,10 +80,12 @@ function AboutUs() {
             >
               {people.map((person) => (
                 <li key={person.name}>
-                  <img
+                  <Image
                     className="aspect-[3/2] w-full rounded-2xl object-cover"
                     src={person.imageUrl}
                     alt=""
+                    width={300}
+                    height={300}
                   />
                   <h3 className="mt-6 text-lg font-semibold leading-8 text-indigo-800">
                     {person.name}

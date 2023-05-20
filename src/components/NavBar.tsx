@@ -16,6 +16,7 @@ import {
 import { Oswald } from 'next/font/google';
 import Link from 'next/link';
 import { Fragment } from 'react';
+import SlideOver from './ui/SlideOver';
 
 const oswald = Oswald({ subsets: ['latin'], weight: ['700'] });
 
@@ -32,7 +33,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                 <div className="flex flex-shrink-0 items-center">
                   <Link className="inline-flex items-center" href="/">
                     <ShieldCheckIcon
-                      className="h-14 w-auto text-amber-500"
+                      className="h-14 w-auto text-brand-500"
                       aria-hidden="true"
                     />
                     <div className="ml-4 flex flex-col text-indigo-700">
@@ -151,7 +152,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                   className="absolute inset-x-0 top-0 z-30 mx-auto w-full max-w-3xl origin-top transform p-2 transition"
                 >
                   <div className="divide-y divide-gray-200 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="bg-indigo-100/50 pt-3 pb-2">
+                    <div className="bg-indigo-100/50 pb-2 pt-3">
                       <div className="flex items-center justify-between px-4">
                         <div>
                           <Link className="inline-flex items-center" href="/">
@@ -183,6 +184,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500">
                             <span className="sr-only">Close menu</span>
                             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                            <SlideOver />
                           </Popover.Button>
                         </div>
                       </div>
@@ -198,7 +200,7 @@ function NavBar({ bottomNavigation }: { bottomNavigation: NavBarProps }) {
                         ))}
                       </div>
                     </div>
-                    <div className="bg-indigo-100/50 pt-4 pb-2">
+                    <div className="bg-indigo-100/50 pb-2 pt-4">
                       <div className="flex items-center px-5">
                         <button
                           type="button"
